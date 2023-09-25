@@ -1,8 +1,7 @@
 import {StyledList} from './ContactsList.styled'
 import { useSelector, useDispatch } from 'react-redux'
 import { getContact, getFilter } from 'redux/selector'
-import { deleteContact } from 'redux/contactsSlice'
-
+import { deleteContact } from 'redux/operations'
 
 const createVisibleContacts = (contacts, filter) =>{
     return filter.trim() === '' ? contacts : contacts.filter(contact => contact.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim()))

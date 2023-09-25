@@ -1,11 +1,11 @@
 import { Formik, Field } from 'formik';
 import { StyledForm, StyledError } from './AddContact.styled';
 import * as Yup from 'yup';
-import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
 import { useSelector } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 import { getContact } from 'redux/selector';
+import { addContact } from 'redux/operations';
+import { useDispatch } from 'react-redux';
 
 const phoneRegExp = /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/
 
